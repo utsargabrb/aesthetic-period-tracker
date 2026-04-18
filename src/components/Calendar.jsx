@@ -11,7 +11,8 @@ import {
   isSameDay, 
   addDays, 
   isWithinInterval,
-  startOfDay
+  startOfDay,
+  endOfDay
 } from 'date-fns';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -59,8 +60,14 @@ export function Calendar({
       const cloneDay = day;
 
       const isCurrentMonth = isSameMonth(cloneDay, monthStart);
-      const isPeriodPrediction = isSameDay(cloneDay, nextPeriodDate);
-      const isLastPeriod = isSameDay(cloneDay, lastPeriodStart);
+      const isPeriodPrediction = isWithinInterval(cloneDay, {
+        start: startOfDay(nextPeriodDate),
+        end: endOfDay(addDays(nextPeriodDate, 4))
+      });
+      const isLastPeriod = isWithinInterval(cloneDay, {
+        start: startOfDay(lastPeriodStart),
+        end: endOfDay(addDays(lastPeriodStart, 4))
+      });
       const isOvulation = isSameDay(cloneDay, ovulationDate);
       
       const inFertileWindow = isWithinInterval(cloneDay, { 
