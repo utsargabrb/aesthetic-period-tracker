@@ -137,11 +137,11 @@ export function Calendar({
           <span>Period (Logged & Predicted)</span>
         </div>
         <div className="legend-item">
-          <div className="legend-swatch" style={{background: 'rgba(174, 219, 240, 0.4)'}}></div>
+          <div className="legend-swatch" style={{background: '#e8def8'}}></div>
           <span>Fertile Window</span>
         </div>
         <div className="legend-item">
-          <div className="legend-swatch" style={{background: '#aedbf0'}}></div>
+          <div className="legend-swatch" style={{background: '#d0bcff'}}></div>
           <span>Ovulation</span>
         </div>
       </div>

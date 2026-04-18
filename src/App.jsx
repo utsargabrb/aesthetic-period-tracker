@@ -2,6 +2,7 @@ import React from 'react';
 import { usePeriodTracker } from './hooks/usePeriodTracker';
 import { Header } from './components/Header';
 import { SettingsPanel } from './components/SettingsPanel';
+import { PredictionsPanel } from './components/PredictionsPanel';
 import { Calendar } from './components/Calendar';
 import { MoodSelector } from './components/MoodSelector';
 import './index.css';
@@ -29,6 +30,12 @@ function App() {
         cycleLength={cycleLength}
         updateCycleLength={updateCycleLength}
         logPeriod={logPeriod}
+      />
+      <PredictionsPanel 
+        nextPeriodDate={nextPeriodDate}
+        ovulationDate={ovulationDate}
+        fertileWindowStart={fertileWindowStart}
+        fertileWindowEnd={fertileWindowEnd}
       />
       <Calendar
         lastPeriodStart={lastPeriodStart}

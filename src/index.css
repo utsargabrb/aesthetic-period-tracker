@@ -268,12 +268,15 @@ body {
 }
 
 .highlight-fertile {
-  background: rgba(174, 219, 240, 0.4);
+  background: #e8def8 !important; /* Soft distinct lavender */
+  color: #4a4458;
 }
 
 .highlight-ovulation {
-  background: #aedbf0;
-  color: var(--text-dark);
+  background: #d0bcff !important; /* Brighter lavender for ovulation */
+  color: #381e72;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(208, 188, 255, 0.4);
 }
 
 .dot {
